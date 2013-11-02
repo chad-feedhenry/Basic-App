@@ -1,8 +1,9 @@
 body {
-  font-­family: arial, sans-­serif;
-  font-­size: 14px;
+  font-family: arial, sans-serif;
+  font-size: 14px;
   color: white;
   background: #777;
+  padding: 1em !important;
   padding: 1em !important;
   text-­shadow: 1px 1px 2px #000;
   ­webkit-­font-­smoothing: antialiased;
