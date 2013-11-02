@@ -38,9 +38,5 @@ $fh.ready(function() {
     }, function(msg,err){
       alert(err.error);
     });
-    
-    
   };
-  
-  
 });
