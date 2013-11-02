@@ -19,3 +19,22 @@ exports.getConfig = function(params, callback) {
  * @param {Object} params This option is passed from our client act call.
  * @param {Function} callback Callback function we call with args callback(err, response)
  **/
+exports.getByFacebookUsername = function(params, callback){
+  var username = params.username;
+  //Check if user name is provided
+  if(!username || username === ""){
+    return callback("username cannot be empty/undefined", null);
+  }
+  
+  //Call facebook graph API
+  var request = require('request');
+  request('http://graph.facebook.com/' + username, function(err, res, body){
+    if(err){
+      return callback({
+        msg: "Facebook Request Error", err:err
+      });
+    }
+    return callback (null, body);
+  });
+  
+}
