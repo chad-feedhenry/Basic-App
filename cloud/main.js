@@ -14,3 +14,8 @@ exports.getConfig = function(params, callback) {
   return callback(null, {config: cfg.config});
 };
 
+/**
+ * Get the details of a facebook user by username
+ * @param {Object} params This option is passed from our client act call.
+ * @param {Function} callback Callback function we call with args callback(err, response)
+ **/
